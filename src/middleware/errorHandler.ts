@@ -18,9 +18,12 @@ export const errorHandler = (
 ) => {
   // determine the error type
   if (err instanceof CustomError) {
+    console.error(`CustomError: ${err.message}`);
     return res.status(err.statusCode).send({ errors: err.serializeErrors() });
   }
+  console.error(`Error: ${err.message}`);
+
   res.status(400).send({
-    message: err.message
+    message: err.message,
   });
 };
