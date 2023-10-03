@@ -1,7 +1,7 @@
 import { Stan } from "node-nats-streaming";
-import Event from "./baseEvent";
+import { Event } from "./baseEvent";
 
-export default abstract class BasePublisher<T extends Event> {
+export abstract class BasePublisher<T extends Event> {
   abstract subject: T["subject"];
 
   constructor(private client: Stan) {

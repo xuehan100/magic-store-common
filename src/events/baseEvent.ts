@@ -1,6 +1,6 @@
 import { Subjects } from "./subjects";
 
-export default interface Event {
+export interface Event {
   subject: Subjects;
   data: any;
 }

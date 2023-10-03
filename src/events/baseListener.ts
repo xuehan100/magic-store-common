@@ -1,5 +1,5 @@
 import { Message, Stan, SubscriptionOptions } from "node-nats-streaming";
-import Event from "./baseEvent";
+import { Event } from "./baseEvent";
 
 export default abstract class BaseListener<T extends Event> {
   // name of the channel the listner is going to listen
